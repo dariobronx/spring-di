@@ -1,28 +1,30 @@
 package com.example;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
 public class Address {
-	private String country = "myCountry";
-	private String code;
+	@Autowired
+	private Country country;
+	private String code = "mycode";
 
 	public Address() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public Address(String country, String code) {
+	public Address(Country country, String code) {
 		super();
 		this.country = country;
 		this.code = code;
 	}
 
-	public String getCountry() {
+	public Country getCountry() {
 		return country;
 	}
 
-	public void setCountry(String country) {
+	public void setCountry(Country country) {
 		this.country = country;
 	}
 
